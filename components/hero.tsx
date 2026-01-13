@@ -156,9 +156,12 @@ export default function Hero() {
                   </div>
                 </div>
                 {/* লোগো পার্ট */}
-                <div className="flex items-center gap-2">
-                  <div className="h-6 w-6 bg-green rounded-sm rotate-45"></div>
-                  <span className="text-xl font-bold text-white">AevonX</span>
+                <div className="flex cursor-pointer items-center gap-3">
+                  <div className="relative flex h-8 w-8 items-center justify-center">
+                    <div className="absolute h-full w-full animate-pulse rotate-45 rounded-sm bg-[#b5ff3d] opacity-20"></div>
+                    <div className="h-5 w-5 rotate-45 rounded-sm bg-[#b5ff3d] shadow-[0_0_15px_#b5ff3d]"></div>
+                  </div>
+                  <span className="text-xl font-bold tracking-tight text-white">AevonX</span>
                 </div>
               </div>
             </div>
@@ -369,11 +372,12 @@ export default function Hero() {
                   <p className="text-text-muted text-sm font-semibold">Founder of AevonX</p>
                 </div>
 
-                <div className="flex items-center gap-3 opacity-80">
-                  <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
-                    <div className="w-4 h-4 bg-white rounded-sm rotate-45"></div>
+                <div className="flex cursor-pointer items-center gap-3">
+                  <div className="relative flex h-8 w-8 items-center justify-center">
+                    <div className="absolute h-full w-full animate-pulse rotate-45 rounded-sm bg-[#b5ff3d] opacity-20"></div>
+                    <div className="h-5 w-5 rotate-45 rounded-sm bg-[#b5ff3d] shadow-[0_0_15px_#b5ff3d]"></div>
                   </div>
-                  <span className="text-white font-bold text-xl tracking-tighter italic">Overlay</span>
+                  <span className="text-xl font-bold tracking-tight text-white">AevonX</span>
                 </div>
               </div>
             </div>
