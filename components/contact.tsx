@@ -106,7 +106,7 @@ const Contact = () => {
                   name="name"
                   required
                   placeholder="Enter your full name"
-                  className="w-full bg-[#111] border border-gray-800 rounded-lg px-4 py-3 text-gray-500 focus:outline-none focus:border-[#b5ff3d] transition-all"
+                  className="w-full bg-[#111] border border-gray-800 rounded-lg px-4 py-3 text-gray-300 focus:outline-none focus:border-[#b5ff3d] transition-all"
                 />
               </div>
 
@@ -117,7 +117,7 @@ const Contact = () => {
                   name="email"
                   required
                   placeholder="Enter your email address"
-                  className="w-full bg-[#111] border border-gray-800 rounded-lg px-4 py-3 text-gray-500 focus:outline-none focus:border-[#b5ff3d] transition-all"
+                  className="w-full bg-[#111] border border-gray-800 rounded-lg px-4 py-3 text-gray-300 focus:outline-none focus:border-[#b5ff3d] transition-all"
                 />
               </div>
 
@@ -128,7 +128,7 @@ const Contact = () => {
                   required
                   rows={4}
                   placeholder="Tell us about your project, vision, or interest in our programs..."
-                  className="w-full bg-[#111] border border-gray-800 rounded-lg px-4 py-3 text-gray-500 focus:outline-none focus:border-[#b5ff3d] transition-all resize-none"
+                  className="w-full bg-[#111] border border-gray-800 rounded-lg px-4 py-3 text-gray-300 focus:outline-none focus:border-[#b5ff3d] transition-all resize-none"
                 ></textarea>
               </div>
 
