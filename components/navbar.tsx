@@ -51,7 +51,7 @@ export default function Navbar() {
         ${isOpen ? "top-full opacity-100 visible -translate-y-4 scale-100" : "top-full opacity-0 invisible -translate-y-6 scale-95"}`}
       >
         <div className="flex flex-col items-center gap-8 py-16 text-xl font-medium text-white">
-          <a href="#" onClick={() => setIsOpen(false)} className="group relative transition-colors hover:text-[#b5ff3d]">
+          <a href="/" onClick={() => setIsOpen(false)} className="group relative transition-colors hover:text-[#b5ff3d]">
             Home
             <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#b5ff3d] transition-all group-hover:w-full"></span>
           </a>
@@ -67,7 +67,7 @@ export default function Navbar() {
             Pricing
             <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#b5ff3d] transition-all group-hover:w-full"></span>
           </a>
-          <a href="#" onClick={() => setIsOpen(false)} className="group relative transition-colors hover:text-[#b5ff3d]">
+          <a href="/contact" onClick={() => setIsOpen(false)} className="group relative transition-colors hover:text-[#b5ff3d]">
             Contact Us
             <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#b5ff3d] transition-all group-hover:w-full"></span>
           </a>
