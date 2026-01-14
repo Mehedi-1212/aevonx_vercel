@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+// import { ChevronDown } from "lucide-react";
+import Faq from "./faq";
 
 export default function Hero() {
   const [isYearly, setIsYearly] = useState(false);
@@ -21,28 +22,6 @@ export default function Hero() {
       features: ["For large businesses", "Full marketing strategy", "Advanced analytics", "24/7 priority support"],
     },
   ];
-
-  const [activeTab, setActiveTab] = useState<"clients" | "students" | "employees">("clients");
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const faqData = {
-    clients: [
-      { q: "How do you handle custom software projects?", a: "We follow an agile methodology to ensure quality and transparency for our clients." },
-      { q: "What is your typical project timeline?", a: "It depends on the scope, but usually we deliver within 4-12 weeks." },
-      { q: "Do you work with international clients?", a: "Yes, we have experience working with clients from various countries and time zones." },
-    ],
-    students: [
-      {
-        q: "How can I join your internship program?",
-        a: "Once you complete our advanced courses successfully, we offer internship opportunities in our company.",
-      },
-      { q: "Do you provide hands-on mentorship?", a: "Yes, our senior developers provide direct mentorship to help you become a great developer." },
-    ],
-    employees: [
-      { q: "What is the work culture like?", a: "We believe in a remote-friendly, growth-oriented and innovative environment for our team." },
-      { q: "What are the career growth opportunities?", a: "We provide clear roadmaps for leadership roles and continuous skill development." },
-    ],
-  };
 
   const services = [
     {
@@ -79,8 +58,8 @@ export default function Hero() {
 
   const testimonials = [
     {
-      name: "Noah Ramirez",
-      role: "SEO Specialist",
+      name: "Mehedi H.",
+      role: "Founder of AevonX",
       rating: "4.9",
       feedback:
         "Working with Metilo has been a game-changer. Their innovative strategies helped us triple our online engagement in just six months. Fintech is its potential to promote financial inclusion.",
@@ -91,7 +70,7 @@ export default function Hero() {
   return (
     <>
       {/* hero section // */}
-      <main className="relative flex flex-col items-center justify-center pt-20 pb-20 px-6 min-h-[90vh]">
+      <main className="relative flex flex-col items-center pt-40 pb-24 px-6 min-h-[90vh]">
         <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-full max-w-[1200px] opacity-60 pointer-events-none -z-10">
           <img src="https://framerusercontent.com/images/848Y9vY6pW9mEaE8yTj6m6MvR8.png" alt="Globe Background" className="w-full h-auto" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -522,55 +501,7 @@ export default function Hero() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-black text-white">
-        <div className="max-w-4xl mx-auto px-10">
-          <h2 className="text-3xl md:text-6xl font-semibold text-center mb-10 text-white leading-tight">
-            Frequently Asked <br />
-            <span className="text-white/40">Questions</span>
-          </h2>
-
-          {/* Tab Buttons */}
-          <div className="flex justify-center gap-3 mb-12 flex-wrap">
-            {(["clients", "students", "employees"] as const).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => {
-                  setActiveTab(tab);
-                  setOpenIndex(null);
-                }}
-                className={`px-8 py-2 rounded-full border transition-all duration-300 font-medium cursor-pointer ${
-                  activeTab === tab
-                    ? "bg-[#b5ff3d] text-black border-[#b5ff3d] shadow-[0_0_15px_rgba(181,255,61,0.3)]"
-                    : "border-gray-700 text-gray-400 hover:border-[#b5ff3d] hover:text-[#b5ff3d]"
-                } capitalize`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-
-          {/* Accordion List with Map */}
-          <div className="space-y-4">
-            {faqData[activeTab].map((item, index) => (
-              <div key={index} className="border border-gray-800 rounded-2xl overflow-hidden bg-[#0a0a0a]">
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full flex justify-between items-center p-6 text-left hover:bg-[#111] transition-all cursor-pointer"
-                >
-                  <span className="text-lg font-semibold">{item.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-[#b5ff3d] transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
-                </button>
-
-                <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
-                >
-                  <div className="p-6 pt-0 text-gray-400 border-t border-gray-900 leading-relaxed">{item.a}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Faq />
     </>
   );
 }
