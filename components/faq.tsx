@@ -70,9 +70,7 @@ export default function FAQ() {
                   openIndex === index ? "max-h-96 opacity-100 py-6 pt-0" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-6 text-gray-400 border-t border-gray-900 leading-relaxed pt-4">
-                  {item.a}
-                </div>
+                <div className="px-6 text-gray-400 border-t border-gray-900 leading-relaxed pt-4">{item.a}</div>
               </div>
             </div>
           ))}
